@@ -11,6 +11,10 @@ class LineaTelefonica:
     
     # Costo total de las llamadas
     costoLlamadas=0
+
+    totalSegundos=0
+
+    costoLlamadaEnDolares=0
     
     '''----------------------------------------------------------------
     # Metodos
@@ -21,6 +25,8 @@ class LineaTelefonica:
         self.numeroLlamadas = 0
         self.numeroMinutos = 0
         self.costoLlamadas = 0
+        self.totalSegundos = 0
+        self.costoLlamadaEnDolares = 0
         
         # TODO Parte2 PuntoA: Completar el método según la documentación dada.
         
@@ -45,6 +51,8 @@ class LineaTelefonica:
         self.numeroLlamadas = 0
         self.numeroMinutos = 0
         self.costoLlamadas = 0
+        self.totalSegundos = 0
+        self.costoLlamadaEnDolares = 0
         # TODO Parte2 PuntoE: Completar el método según la documentación dada.
 
     # Agrega una llamada local a la línea telefónica
@@ -80,6 +88,8 @@ class LineaTelefonica:
     def agregarLlamadaCelular(self, pMinutos):
         self.numeroLlamadas += 1
         self.numeroMinutos += pMinutos
-        self.costoLlamadas += pMinutos * 999
-        # TODO Parte2 PuntoG: Completar el método según la documentación dada.
-       
+        self.costoLlamadas += pMinutos * 999        
+
+    def convertirPesosAdolares(self):
+        dolares = self.costoLlamadas / 3100
+        self.costoLlamadaEnDolares = dolares

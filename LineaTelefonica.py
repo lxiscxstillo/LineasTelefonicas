@@ -26,6 +26,9 @@ class LineaTelefonica:
 
     prepago=0
     
+    cantidadDeMinutosDeLlamadasACelular=0
+
+    costoMinutosLlamadasAcelular=0
     '''----------------------------------------------------------------
     # Metodos
     ----------------------------------------------------------------'''
@@ -37,6 +40,8 @@ class LineaTelefonica:
         self.costoLlamadas = 0
         self.totalSegundos = 0
         self.costoLlamadaEnDolares = 0
+        self.costoMinutosLlamadasAcelular = 0
+        self.cantidadDeMinutosLlamadasACelular = 0
         
         # TODO Parte2 PuntoA: Completar el método según la documentación dada.
         
@@ -63,6 +68,8 @@ class LineaTelefonica:
         self.costoLlamadas = 0
         self.totalSegundos = 0
         self.costoLlamadaEnDolares = 0
+        self.cantidadDeMinutosDeLlamadasACelular = 0
+        self.costoMinutosLlamadasAcelular = 0
         # TODO Parte2 PuntoE: Completar el método según la documentación dada.
 
     # Agrega una llamada local a la línea telefónica
@@ -99,7 +106,9 @@ class LineaTelefonica:
     def agregarLlamadaCelular(self, pMinutos):
         self.numeroLlamadas += 1
         self.numeroMinutos += pMinutos
-        self.costoLlamadas += pMinutos * 999  
+        self.costoLlamadas += pMinutos * 999
+        self.cantidadDeMinutosDeLlamadasACelular
+        self.costoMinutosLlamadasAcelular 
 
     def consultarDescuento(self):
         return self.descuento
@@ -127,3 +136,15 @@ class LineaTelefonica:
     
     def definirEstrato(self, pEstrato):
         self.darEstrato = pEstrato
+
+    def darMinutosPorEstrato(self):
+        return self.darNumeroMinutos() * self.darEstrato()
+
+    def ConsultarMinutosACelular(self):
+        return self.cantidadDeMinutosDeLlamadasACelular
+
+    def ConsultarCostoMinutosAcelular(self):
+        return self.costoMinutosLlamadasAcelular 
+    
+    def Bono(self):
+        self.ConsultarCostoMinutosAcelular() * 0.02

@@ -21,6 +21,9 @@ class Empresa:
         self.linea1 = LineaTelefonica()
         self.linea2 = LineaTelefonica()
         self.linea3 = LineaTelefonica()
+        self.linea1.darEstrato(2)
+        self.linea2.darEstrato(5)
+        self.linea3.darEstrato(6)
         # TODO Parte3 PuntoA: Construir linea2 y linea3.
         
     # Retorna la l�nea 1.
@@ -163,8 +166,14 @@ class Empresa:
         b = self.linea2.aplicarDescuento()
         c = self.linea3.aplicarDescuento()
         return a + b + c
-
-
+    
+    def darTotalMinutosPorEstrato(self):
+        a = self.linea1.darMinutosPorEstrato()
+        b = self.linea2.darMinutosPorEstrato()
+        c = self.linea3.darMinutosPorEstrato()
+        return a + b + c 
+    
+    
     '''----------------------------------------------------------------
     # Puntos de Extensi�n
     ----------------------------------------------------------------'''
@@ -172,9 +181,9 @@ class Empresa:
     # M�todo para la extensi�n 1.
     # @return Respuesta 1.
     def metodo1(self):
-        return "Respuesta 1"
+        return "El total de minutos a celular es" + self.linea1.ConsultarMinutosACelular() + self.linea2.ConsultarMinutosACelular() + self.linea3.ConsultarMinutosACelular()
 
     # M�todo para la extensi�n 2.
     # @return Respuesta 2.
     def metodo2(self):
-        return "Respuesta 2"
+        return "Valor del bono es" + self.linea1.Bono() + self.linea2.Bono() + self.linea3.Bono()

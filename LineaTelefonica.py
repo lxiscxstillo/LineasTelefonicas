@@ -115,8 +115,8 @@ class LineaTelefonica:
         self.prepago = nuevoSaldo
 
     def motivarCliente(self):
-        if self.numeroMinutos == 30
-        self.prepago + 1000
+        if self.numeroMinutos == 30:
+            self.prepago + 1000
 
     def convertirPesosAdolares(self):
         dolares = self.costoLlamadas / 3100

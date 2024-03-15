@@ -15,6 +15,16 @@ class LineaTelefonica:
     totalSegundos=0
 
     costoLlamadaEnDolares=0
+
+    '''-------------------------------------------------------
+    # 1, 2, 3, 4, 5, 6, 7,
+    -------------------------------------------------------'''
+
+    estrato=0
+
+    descuento=0.0
+
+    prepago=0
     
     '''----------------------------------------------------------------
     # Metodos
@@ -67,7 +77,8 @@ class LineaTelefonica:
         # Suma el costo (costo por minuto: 35 pesos)
         self.costoLlamadas += pMinutos * 35
 
-    """
+        self.prepago
+        """
         Agrega una llamada de larga distancia a la línea telefónica.
         
         post: Se incrementá en 1 numeroDeLlamadas, se incremento numeroDeMinutos en minutos, costoLlamadas aumentá en ( minutos * 380 )
@@ -88,8 +99,31 @@ class LineaTelefonica:
     def agregarLlamadaCelular(self, pMinutos):
         self.numeroLlamadas += 1
         self.numeroMinutos += pMinutos
-        self.costoLlamadas += pMinutos * 999        
+        self.costoLlamadas += pMinutos * 999  
+
+    def consultarDescuento(self):
+        return self.descuento
+
+    def aplicarDescuento(self):
+        return (self.costoLlamadas * self.descuento) / 100    
+    
+    def consultarSaldo(self):
+        return "Su saldo disponible es" + self.prepago
+    
+    def recargarSaldo(self, montoPesos):
+        nuevoSaldo = self.prepago + montoPesos
+        self.prepago = nuevoSaldo
+
+    def motivarCliente(self):
+        if self.numeroMinutos == 30
+        self.prepago + 1000
 
     def convertirPesosAdolares(self):
         dolares = self.costoLlamadas / 3100
         self.costoLlamadaEnDolares = dolares
+
+    def darEstrato(self):
+        return self.estrato
+    
+    def definirEstrato(self, pEstrato):
+        self.darEstrato = pEstrato

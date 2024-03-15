@@ -158,6 +158,13 @@ class Empresa:
         self.linea3.Reiniciar()
         # // TODO Parte3 PuntoB: Completar el m�todo para reiniciar las lineas 2 y 3.
 
+    def aplicarDescuentosAtodos(self):
+        a = self.linea1.aplicarDescuento()
+        b = self.linea2.aplicarDescuento()
+        c = self.linea3.aplicarDescuento()
+        return a + b + c
+
+
     '''----------------------------------------------------------------
     # Puntos de Extensi�n
     ----------------------------------------------------------------'''

@@ -26,7 +26,7 @@ class TestLineaTelefonica:
 
     def test_reiniciar(self):
         self.linea.agregarLlamadaLargaDistancia(7)
-        self.linea.reiniciar()
+        self.linea.Reiniciar()
         assert self.linea.darNumeroLlamadas() == 0
         assert self.linea.darNumeroMinutos() == 0
         assert self.linea.darCostoLlamadas() == 0

@@ -156,9 +156,9 @@ class Empresa:
         # <b>post: </b> Se reinici� la llamada a la l�nea 1, 2 y 3. 
     '''
     def reiniciar(self):
-        self.linea1.Reiniciar()
-        self.linea2.Reiniciar()
-        self.linea3.Reiniciar()
+        self.linea1.Reiniciar(1)
+        self.linea2.Reiniciar(1)
+        self.linea3.Reiniciar(1)
         # // TODO Parte3 PuntoB: Completar el m�todo para reiniciar las lineas 2 y 3.
 
     def aplicarDescuentosAtodos(self):
